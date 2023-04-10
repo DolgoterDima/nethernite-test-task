@@ -1,0 +1,13 @@
+$breakpoints-custom: (
+  md: 960px,
+);
+
+@mixin responsive($size) {
+  @if map-has-key($breakpoints-custom, $size) {
+    @media (min-width: map-get($breakpoints-custom, $size)) {
+      @content;
+    }
+  } @else {
+    @error "Invalid breakpoint: #{$size}. Please use one of #{$breakpoints-custom}.";
+  }
+}

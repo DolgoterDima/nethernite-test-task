@@ -1,0 +1,6 @@
+.skeleton {
+  animation: flashing linear 1s infinite forwards;
+  background:rgba(var(--v-theme-on-surface),var(--v-border-opacity));
+  color: transparent;
+  border-radius: 6px;
+}
